@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.registration-block,
+.login-block {
+    text-align: center;
+    margin-top: 100px;
+}
+.fields-block {
+    display: flex;
+    flex-direction: column;
+}
+.label-margin {
+    margin-top: 10px;
+}
+.input-text {
+    margin-left: 15px;
+}
+.btn-reg,
+.btn-login {
+    margin: 0 auto;
+    padding: 5px;
+}
+.information-block {
+    margin: 15px 0;
+    background: yellow;
+}
