@@ -19,10 +19,12 @@ btnLogin.addEventListener('click', function() {
 
     function readyState() {
         if (xhr.readyState === 4) {
-
-            if (xhr.responseText === 'You are logged in') {
+            let response = JSON.parse(xhr.responseText);
+            if (response.text === 'You are logged in') {
                 informationBlock.style.display = 'block';
-                informationBlock.innerHTML = xhr.responseText;
+                informationBlock.innerHTML = response.text;
+                localStorage.setItem('nicknameActive', response.nickname)
+
                 function redirectToChatPage() {
                     window.location.href = "http://localhost:3000/chat.html";
                 };
